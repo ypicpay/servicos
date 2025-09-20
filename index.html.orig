@@ -17,7 +17,7 @@
 	<!-- Navigation -->
 <nav id="navbar_top" class="navbar navbar-dark navbar-expand-lg fixed-top">
 		<div class="container">
-		<a class="navbar-brand" href="index.html">
+		<a class="navbar-brand" href="index">
 			<img class="img-fluid" src="assets/images/logo.svg" alt="DinoNode Logo">
 			Dino<span>Node</span>
 		</a>
@@ -27,13 +27,13 @@
 		<div class="collapse navbar-collapse" id="dinoNavbar">
 		    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 		        <li class="nav-item">
-		          	<a class="nav-link" href="index.html">Home</a>
+		          	<a class="nav-link" href="index">Home</a>
 		        </li>
 		        <li class="nav-item">
-		          	<a class="nav-link" href="minecraft.html">Minecraft Hosting</a>
+		          	<a class="nav-link" href="minecraft">Minecraft Hosting</a>
 		        </li>
 		        <li class="nav-item dropdown">
-		          	<a class="nav-link dropdown-toggle" href="index.html#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		          	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 		            	Game Hosting
 		          	</a>
 		          	<ul class="dropdown-menu dropdown-large dropdown-menu-end">
@@ -41,7 +41,7 @@
 							<div class="col-md-6">
 								<ul class="list-unstyled">
 									<li>
-										<a class="dropdown-item" href="ark.html">
+										<a class="dropdown-item" href="ark">
 											<div class="d-flex align-items-center dropdown-item-mega">
 												<img src="assets/images/game_icons/ark.png" class="rounded" alt="ARK Icon">
 												<div class="dropdown-item-content ms-2">
@@ -52,7 +52,7 @@
 										</a>
 									</li>
 					            	<li>
-										<a class="dropdown-item" href="csgo.html">
+										<a class="dropdown-item" href="csgo">
 											<div class="d-flex align-items-center dropdown-item-mega">
 												<img src="assets/images/game_icons/csgo.png" class="rounded" alt="CS:GO Icon">
 												<div class="dropdown-item-content ms-2">
@@ -63,7 +63,7 @@
 										</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="valheim.html">
+										<a class="dropdown-item" href="valheim">
 											<div class="d-flex align-items-center dropdown-item-mega">
 												<img src="assets/images/game_icons/valheim.png" class="rounded" alt="Valheim Icon">
 												<div class="dropdown-item-content ms-2">
@@ -78,7 +78,7 @@
 							<div class="col-md-6">
 								<ul class="list-unstyled">
 									<li>
-										<a class="dropdown-item" href="fivem.html">
+										<a class="dropdown-item" href="fivem">
 											<div class="d-flex align-items-center dropdown-item-mega">
 												<img src="assets/images/game_icons/fivem.png" class="rounded" alt="FiveM Icon">
 												<div class="dropdown-item-content ms-2">
@@ -89,7 +89,7 @@
 										</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="rust.html">
+										<a class="dropdown-item" href="rust">
 											<div class="d-flex align-items-center dropdown-item-mega">
 												<img src="assets/images/game_icons/rust.png" class="rounded" alt="RUST Icon">
 												<div class="dropdown-item-content ms-2">
@@ -100,7 +100,7 @@
 										</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="palworld.html">
+										<a class="dropdown-item" href="palworld">
 											<div class="d-flex align-items-center dropdown-item-mega">
 												<img src="assets/images/game_icons/palworld.png" class="rounded" alt="Palworld Icon">
 												<div class="dropdown-item-content ms-2">
@@ -116,23 +116,23 @@
 		          	</ul>
 		        </li>
 		        <li class="nav-item dropdown">
-		          	<a class="nav-link dropdown-toggle" href="index.html#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		          	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 		            	Other Hosting
 		          	</a>
 		          	<ul class="dropdown-menu dropdown-menu-end">
-		            	<li><a class="dropdown-item" href="vps-hosting.html">VPS Hosting</a></li>
-		            	<li><a class="dropdown-item" href="discord-hosting.html">Discord Hosting</a></li>
+		            	<li><a class="dropdown-item" href="vps-hosting">VPS Hosting</a></li>
+		            	<li><a class="dropdown-item" href="discord-hosting">Discord Hosting</a></li>
 		          	</ul>
 		        </li>
 		        <li class="nav-item dropdown">
-		          	<a class="nav-link dropdown-toggle" href="index.html#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		          	<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 		            	Important
 		          	</a>
 		          	<ul class="dropdown-menu dropdown-menu-end">
-		            	<li><a class="dropdown-item" href="partners.html">Partners</a></li>
-		            	<li><a class="dropdown-item" href="index.html#">Contact</a></li>
-		            	<li><a class="dropdown-item" href="terms-of-service.html">Terms of Service</a></li>
-		            	<li><a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a></li>
+		            	<li><a class="dropdown-item" href="partners">Partners</a></li>
+		            	<li><a class="dropdown-item" href="#">Contact</a></li>
+		            	<li><a class="dropdown-item" href="terms-of-service">Terms of Service</a></li>
+		            	<li><a class="dropdown-item" href="privacy-policy">Privacy Policy</a></li>
 		          	</ul>
 		        </li>
 		        <li class="nav-item">
@@ -141,10 +141,10 @@
 							Client Area
 						</a>
 						<ul class="dropdown-menu dropdown-menu-end dropdown-menu-panel" aria-labelledby="panel">
-							<a class="dropdown-item" href="index.html#">									
+							<a class="dropdown-item" href="#">									
 								Client Area <span class="d-block">Billing &amp; Support</span>
 							</a>
-							<a class="dropdown-item" href="index.html#">									
+							<a class="dropdown-item" href="#">									
 								Game Panel <span class="d-block">Game Management</span>
 							</a>
 						</ul>
@@ -169,7 +169,7 @@
                                     <div class="hero_plans">
                                         <span class="starting_at">Servers start as</span>
                                         <h3 class="price mb-4">&dollar;0.75<span class="ms-2">per / Slots</span></h3>
-                                        <a href="index.html#" class="btn btn-main">
+                                        <a href="#" class="btn btn-main">
                                             See more                                        </a>
                                     </div>
                                 </div>
@@ -187,7 +187,7 @@
                                     <div class="hero_plans">
                                         <span class="starting_at">Servers start as</span>
                                         <h3 class="price mb-4">&dollar;0.75<span class="ms-2">per / Slots</span></h3>
-                                        <a href="index.html#" class="btn btn-main">
+                                        <a href="#" class="btn btn-main">
                                             See more                                        </a>
                                     </div>
                                 </div>
@@ -205,7 +205,7 @@
                                     <div class="hero_plans">
                                         <span class="starting_at">Servers start as</span>
                                         <h3 class="price mb-4">&dollar;0.75<span class="ms-2">per / Slots</span></h3>
-                                        <a href="index.html#" class="btn btn-main">
+                                        <a href="#" class="btn btn-main">
                                             See more                                        </a>
                                     </div>
                                 </div>
@@ -223,7 +223,7 @@
                                     <div class="hero_plans">
                                         <span class="starting_at">Servers start as</span>
                                         <h3 class="price mb-4">&dollar;0.75<span class="ms-2">per / Slots</span></h3>
-                                        <a href="index.html#" class="btn btn-main">
+                                        <a href="#" class="btn btn-main">
                                             See more                                        </a>
                                     </div>
                                 </div>
@@ -241,7 +241,7 @@
                     <div class="col-lg-10">
                         <div class="row d-flex align-items-center justify-content-center">
                                                         <div class="col-lg-3 col-2">
-                                <a data-slide-index="0" href="index.html#" class="text-decoration-none">
+                                <a data-slide-index="0" href="#" class="text-decoration-none">
                                     <div class="hero_box py-3 px-3 d-flex align-items-center">
                                         <div class="pager__icons me-2">
                                             <span class="icon">
@@ -256,7 +256,7 @@
                                 </a>
                             </div>
                                                         <div class="col-lg-3 col-2">
-                                <a data-slide-index="1" href="index.html#" class="text-decoration-none">
+                                <a data-slide-index="1" href="#" class="text-decoration-none">
                                     <div class="hero_box py-3 px-3 d-flex align-items-center">
                                         <div class="pager__icons me-2">
                                             <span class="icon">
@@ -271,7 +271,7 @@
                                 </a>
                             </div>
                                                         <div class="col-lg-3 col-2">
-                                <a data-slide-index="2" href="index.html#" class="text-decoration-none">
+                                <a data-slide-index="2" href="#" class="text-decoration-none">
                                     <div class="hero_box py-3 px-3 d-flex align-items-center">
                                         <div class="pager__icons me-2">
                                             <span class="icon">
@@ -286,7 +286,7 @@
                                 </a>
                             </div>
                                                         <div class="col-lg-3 col-2">
-                                <a data-slide-index="3" href="index.html#" class="text-decoration-none">
+                                <a data-slide-index="3" href="#" class="text-decoration-none">
                                     <div class="hero_box py-3 px-3 d-flex align-items-center">
                                         <div class="pager__icons me-2">
                                             <span class="icon">
@@ -602,7 +602,7 @@
 				<p class="mb-0">Join our Discord server for exclusive industry news, updates & giveaways!</p>
 			</div>
 			<div class="col-lg-2">
-				<a href="index.html" class="btn bg-light"><svg class="discord-icon" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path id="Icon" d="m133.408 346.261c95.35 37.211 176.493 44.459 268.445-13.461-.674 1.011-18.863 27.958-66.695 41.768 10.105 13.811 23.916 29.642 23.916 29.642 30.653 0 60.632-8.758 86.568-25.6 20.211-13.474 31.663-36.716 29.305-60.968-4.042-41.432-13.811-81.853-28.968-120.589-19.2-50.526-65.347-85.558-118.905-90.611-4.716-.337-8.084-.337-10.105-.337l-5.389 5.389c61.642 17.516 92.295 44.8 92.968 45.811-94.653-47.832-206.484-48.505-301.811-2.021 0 0 30.316-29.979 97.347-45.811l-4.042-4.042c-7.074 0-13.811.674-20.884 1.684-49.516 8.421-90.947 42.442-108.8 89.263-15.495 40.421-25.6 82.863-29.305 125.979-2.021 22.905 8.758 45.474 27.621 58.611 24.926 16.505 54.568 25.263 84.547 25.263 0 0 12.126-15.832 24.253-29.979-45.474-13.474-64-40.421-64.337-41.432l8.558 4.37c5.116 2.614 10.361 4.982 15.713 7.071zm52.866-29.293c-21.895-.674-39.074-19.2-38.4-41.432.674-20.884 17.516-37.726 38.4-38.4 21.895.674 39.074 19.2 38.4 41.432-1.011 20.885-17.516 37.727-38.4 38.4zm137.431 0c-21.895-.674-39.074-19.2-38.4-41.432.674-20.884 17.516-37.726 38.4-38.4 21.895.674 39.074 19.2 38.4 41.432-.673 20.885-17.516 37.727-38.4 38.4z"/></svg> Join Discord</a>
+				<a href="" class="btn bg-light"><svg class="discord-icon" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path id="Icon" d="m133.408 346.261c95.35 37.211 176.493 44.459 268.445-13.461-.674 1.011-18.863 27.958-66.695 41.768 10.105 13.811 23.916 29.642 23.916 29.642 30.653 0 60.632-8.758 86.568-25.6 20.211-13.474 31.663-36.716 29.305-60.968-4.042-41.432-13.811-81.853-28.968-120.589-19.2-50.526-65.347-85.558-118.905-90.611-4.716-.337-8.084-.337-10.105-.337l-5.389 5.389c61.642 17.516 92.295 44.8 92.968 45.811-94.653-47.832-206.484-48.505-301.811-2.021 0 0 30.316-29.979 97.347-45.811l-4.042-4.042c-7.074 0-13.811.674-20.884 1.684-49.516 8.421-90.947 42.442-108.8 89.263-15.495 40.421-25.6 82.863-29.305 125.979-2.021 22.905 8.758 45.474 27.621 58.611 24.926 16.505 54.568 25.263 84.547 25.263 0 0 12.126-15.832 24.253-29.979-45.474-13.474-64-40.421-64.337-41.432l8.558 4.37c5.116 2.614 10.361 4.982 15.713 7.071zm52.866-29.293c-21.895-.674-39.074-19.2-38.4-41.432.674-20.884 17.516-37.726 38.4-38.4 21.895.674 39.074 19.2 38.4 41.432-1.011 20.885-17.516 37.727-38.4 38.4zm137.431 0c-21.895-.674-39.074-19.2-38.4-41.432.674-20.884 17.516-37.726 38.4-38.4 21.895.674 39.074 19.2 38.4 41.432-.673 20.885-17.516 37.727-38.4 38.4z"/></svg> Join Discord</a>
 			</div>
 		</div>
 	</div>
@@ -623,43 +623,43 @@
 					<div class="col-lg-3">
 						<h4>Services</h4>
 						<ul>
-							<li><a href="ark.html">ARK: Survival Evolved</a></li>
-							<li><a href="csgo.html">Counter Strike GO</a></li>
-							<li><a href="fivem.html">FiveM</a></li>
-							<li><a href="minecraft.html">Minecraft</a></li>
-							<li><a href="valheim.html">Valheim</a></li>
-							<li><a href="rust.html">RUST</a></li>
-							<li><a href="terraria.html">Terraria</a></li>
+							<li><a href="ark">ARK: Survival Evolved</a></li>
+							<li><a href="csgo">Counter Strike GO</a></li>
+							<li><a href="fivem">FiveM</a></li>
+							<li><a href="minecraft">Minecraft</a></li>
+							<li><a href="valheim">Valheim</a></li>
+							<li><a href="rust">RUST</a></li>
+							<li><a href="terraria">Terraria</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-3">
 						<h4>Support</h4>
 						<ul>
-							<li><a href="index.html">Knowledgebase</a></li>
-							<li><a href="index.html">
+							<li><a href="">Knowledgebase</a></li>
+							<li><a href="">
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
 									<path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" />
 								</svg>
 								Server Status
 							</a></li>
-							<li><a href="index.html">Client Area</a></li>
-							<li><a href="index.html">Discord</a></li>
+							<li><a href="">Client Area</a></li>
+							<li><a href="">Discord</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-3">
 						<h4>Company</h4>
 						<ul>
-							<li><a href="about-us.html">About Us</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="index.html#">Contact Us</a></li>
-							<li><a href="partners.html">Partners</a></li>
+							<li><a href="about-us">About Us</a></li>
+							<li><a href="blog">Blog</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="partners">Partners</a></li>
 						</ul>
 					</div>
 					<div class="col-lg-3">
 						<h4>Legal</h4>
 						<ul>
-							<li><a href="terms-of-service.html">Terms of Service</a></li>
-							<li><a href="privacy-policy.html">Privacy Policy</a></li>
+							<li><a href="terms-of-service">Terms of Service</a></li>
+							<li><a href="privacy-policy">Privacy Policy</a></li>
 						</ul>
 					</div>
 				</div>
