@@ -3,32 +3,643 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevDie - Aventura Digital</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Especialista em Servidores Minecraft</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variáveis e reset */
+        :root {
+            --verde-minecraft: #3B8526;
+            --verde-escuro: #2A5C1F;
+            --marrom: #8D6E63;
+            --marrom-escuro: #5D4037;
+            --cinza-escuro: #212121;
+            --cinza-claro: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--cinza-claro);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Cabeçalho */
+        header {
+            background-color: var(--verde-minecraft);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* Seção Hero */
+        .hero {
+            padding: 150px 0 100px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--verde-minecraft);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--verde-minecraft);
+            margin: 0 10px;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: var(--verde-escuro);
+            border-color: var(--verde-escuro);
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--verde-minecraft);
+        }
+        
+        /* Seção Sobre */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            border: 5px solid var(--verde-minecraft);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--verde-minecraft);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background-color: var(--verde-minecraft);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        /* Seção Habilidades */
+        .skills {
+            padding: 100px 0;
+            background-color: var(--cinza-escuro);
+            color: white;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .skill-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+            border-left: 4px solid var(--verde-minecraft);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .skill-card i {
+            font-size: 3rem;
+            color: var(--verde-minecraft);
+            margin-bottom: 20px;
+        }
+        
+        .skill-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        /* Seção Projetos */
+        .projects {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-image {
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 10px;
+            color: var(--verde-minecraft);
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .project-tag {
+            background-color: var(--verde-minecraft);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        
+        /* Seção Contato */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--cinza-claro);
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--verde-minecraft);
+            margin-right: 15px;
+            width: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--verde-minecraft);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Rodapé */
+        footer {
+            background-color: var(--cinza-escuro);
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin-bottom: 30px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            color: white;
+            margin: 0 15px;
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--verde-minecraft);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                padding: 120px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+        
+        .minecraft-border {
+            border: 3px solid var(--verde-minecraft);
+            border-image: 
+                linear-gradient(45deg, var(--verde-minecraft), var(--verde-escuro)) 1;
+            box-shadow: 0 0 15px rgba(59, 133, 38, 0.3);
+        }
+    </style>
 </head>
 <body>
-
-    <header class="header">
-        <h1>DevDie</h1>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-cube"></i>
+                    <span>MinecraftDev</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="main-content">
-        <section class="intro-section">
-            <h2 class="title-minecraft">Bem-vindo ao meu mundo de código e criatividade.</h2>
-            <p>Olá, meu nome é Diego Hudy, um desenvolvedor que adora construir coisas inovadoras. Conheça minhas habilidades e veja os blocos que construí.</p>
-            <div class="action-buttons">
-                <a href="#habilidades" class="btn">Conheça minhas Habilidades</a>
-                <a href="#projetos" class="btn">Explore Meus Projetos</a>
+    <!-- Seção Hero -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Especialista em Servidores Minecraft</h1>
+            <p>Crio experiências únicas e personalizadas para servidores Minecraft com plugins customizados, sistemas exclusivos e configurações especializadas.</p>
+            <a href="#projetos" class="btn">Ver Projetos</a>
+            <a href="#contato" class="btn btn-outline">Entrar em Contato</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Sou um desenvolvedor especializado na criação e configuração de servidores Minecraft. Com mais de 5 anos de experiência, já trabalhei em diversos projetos, desde servidores pequenos até redes com milhares de jogadores.</p>
+                    <p>Minha paixão é criar experiências únicas para os jogadores, desenvolvendo plugins personalizados, configurando sistemas de economia, ranks, eventos especiais e muito mais.</p>
+                    <p>Tenho expertise em otimização de servidores para melhor performance, prevenção de lag e resolução de problemas técnicos complexos.</p>
+                    <p>Meu objetivo é sempre entregar projetos de alta qualidade que superem as expectativas dos jogadores e donos de servidores.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1631631480669-535cc43f2327?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80" alt="Desenvolvimento Minecraft">
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <p>By: yPicpay</p>
+    <!-- Seção Habilidades -->
+    <section class="skills" id="habilidades">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Minhas Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Configuração de Servidores</h3>
+                    <p>Setup completo de servidores Spigot, Paper, Bukkit e BungeeCord com configurações otimizadas.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Desenvolvimento de Plugins</h3>
+                    <p>Criação de plugins customizados em Java para funcionalidades exclusivas e sistemas personalizados.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Customização</h3>
+                    <p>Personalização de texturas, modelos 3D, sons e interfaces para experiências únicas.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>Otimização</h3>
+                    <p>Melhoria de performance, redução de lag e ajustes para suportar grandes quantidades de jogadores.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Banco de Dados</h3>
+                    <p>Configuração e integração de MySQL, SQLite e MongoDB para persistência de dados.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Segurança</h3>
+                    <p>Proteção contra hacks, exploits e prevenção de griefing com sistemas avançados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section class="projects" id="projetos">
+        <div class="container">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');"></div>
+                    <div class="project-info">
+                        <h3>SkyBlock Premium</h3>
+                        <p>Desenvolvimento completo de servidor SkyBlock com sistemas customizados de economia, missões e ranks.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Spigot</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Economy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');"></div>
+                    <div class="project-info">
+                        <h3>Factions PvP</h3>
+                        <p>Sistema de Factions completo com habilidades especiais, loja personalizada e balanceamento de PvP.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Paper</span>
+                            <span class="project-tag">PvP</span>
+                            <span class="project-tag">Custom Skills</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=804&q=80');"></div>
+                    <div class="project-info">
+                        <h3>Minigames Network</h3>
+                        <p>Rede de minigames com sistema de lobby, party, friends e 5 minigames exclusivos.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">BungeeCord</span>
+                            <span class="project-tag">Redis</span>
+                            <span class="project-tag">Minigames</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contato@minecraftdev.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-discord"></i>
+                        <div>
+                            <h3>Discord</h3>
+                            <p>MinecraftDev#1234</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Disponibilidade</h3>
+                            <p>Segunda a Sexta: 9h - 18h</p>
+                            <p>Sábado: 10h - 14h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab discord fa-discord"></i></a>
+                <a href="#"><i class="fab github fa-github"></i></a>
+                <a href="#"><i class="fab youtube fa-youtube"></i></a>
+                <a href="#"><i class="fab twitter fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2023 MinecraftDev - Especialista em Servidores Minecraft. Todos os direitos reservados.</p>
+        </div>
     </footer>
-
 </body>
 </html>
